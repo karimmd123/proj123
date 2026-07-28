@@ -1,19 +1,10 @@
-name: test-work
-on: workflow_dispatch
+name: test-env
+on: push
+env:
+  APP_ENV: "dev"
 jobs:
-  build:
-   runs-on: ubuntu-latest
-   steps:
-     - name: build
-       run: echo"build"
-  test:
-   runs-on: 
-   steps:
-     - name: test-phase
-       run: echo"testing"
-  deploy:
-   runs-on:
-   steps:
-     - name: deploy
-       run: echo"deploying"
-       
+  test-env:
+    runs-on: ubuntu-latest
+    steps:
+      - name: connecting to env
+        run: echo "app connecting to $APP_ENV"
