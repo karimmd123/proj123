@@ -4,16 +4,16 @@ jobs:
   build:
    runs-on: ubuntu-latest
    steps:
-     - name: build step
-       run: echo"running building"
+     - name: build
+       run: echo"build"
   test:
    runs-on: 
    steps:
      - name: test-phase
-       run: echo"running test cases"
+       run: echo"testing"
   deploy:
    runs-on:
    steps:
-     - name: deploy the app
-       run: echo"app deployed"
-     
+     - name: deploy
+       run: echo"deploying"
+       
